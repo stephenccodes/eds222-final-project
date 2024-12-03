@@ -1,0 +1,23 @@
+---
+title: "eds222-final-project"
+format: html
+editor: visual
+---
+
+
+What is my hypothesis.
+
+Determine the P-value.
+
+Spend a lot of time on the methods, explain research question, objective, where the data is from. Add citations where applicable. Does the data satisfy the needs of the analysis?  EX: “ I need to do another test because my results aren’t robust enough” 
+
+Linear or logistic regression based on hypothesis and data.
+
+Determine/explain what the indexes are representative of.
+
+Tidy the data, make it longer and compare state by region and make it a categorical variable for a logistic regression: “How likely is it that a state is in a  given region based on the values for fert/pest use”. Or I could compare a state to the national average. 
+
+Remove yield consideration from research question: it is already assumed that pest/fert affects yields.
+
+Potential OVB: is total area represented?  because that affects yield.
+
