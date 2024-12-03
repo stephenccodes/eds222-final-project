@@ -2,8 +2,26 @@
 title: "eds222-final-project"
 format: html
 editor: visual
+editor_options: 
+  chunk_output_type: console
 ---
 
+**Final Project**
+
+*Data*
+- Source(s)?
+- Completeness?
+- Processing?
+
+*Explore*
+- Visualize
+- Summarize
+- Hypothesize
+
+*Analysis*
+- Method?
+- Implementation?
+- Diagnostics?
 
 What is my hypothesis.
 
@@ -20,4 +38,54 @@ Tidy the data, make it longer and compare state by region and make it a categori
 Remove yield consideration from research question: it is already assumed that pest/fert affects yields.
 
 Potential OVB: is total area represented?  because that affects yield.
+
+
+**Outline**
+
+*Intro*
+- Introduction
+- Data summary & citation
+- Research question & objective
+
+*Setup*
+- Load packages
+- Read in data
+
+*Data preparation*
+- Remove extraneous rows/columns
+- Pivot longer
+- Add region column
+
+*Data exploration & processing*
+- Visualize data
+- Find the p-value
+- Hypo statements
+- Determine methods
+
+*Analysis*
+
+
+
+
+```{r}
+library(tidyverse)
+library(here)
+library(readxl)
+
+crop_output <- read_excel(here("data/new_crop_output_state.xls"))
+
+
+pesticide <- read_excel(here("data/pesticide_consumption_state.xls"))
+labor <- read_csv(here("data/labor_etc.csv"))
+
+```
+
+
+```{r}
+fertilizer <- read_excel(here("data/fertilizer_consumption_state.xls"), skip = 5, range = "A6:AW53")
+
+fertilizer_clean <- fertilizer[rowSums(is.na(fertilizer)) < ncol(fertilizer), ]
+```
+
+
 
